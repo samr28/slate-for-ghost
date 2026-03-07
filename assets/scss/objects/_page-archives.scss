@@ -1,0 +1,109 @@
+/* @group Author and Tags page */
+
+.archive #author div.avatar{ margin-top: 10px; }
+#archives{
+    .tag-description{
+        margin-top: $medium-section-padding;
+        padding: 40px 0px;
+        width: auto;
+        border-radius: 0;
+        .left{            
+            padding: 0;
+            .title{
+                white-space: nowrap;
+            }
+            .meta{
+                margin-left: 0;
+            }
+        }
+        .description{
+            padding: 0 40px;
+            margin: 0 auto;
+            max-width: 450px;
+            font-size: 15px;
+        }
+        .category-image{
+            
+            img{
+                display: block;
+                width: 200px;
+                border-radius: $small-border-radius;
+            }
+        }
+    }
+    
+}
+
+/* @end */
+
+/* @group Global: Author Box */
+
+#author{
+	position: relative;
+	z-index: 1;
+    margin: $section-padding auto 0;
+    padding: 0px 80px 20px;
+    box-sizing: border-box;
+    &.no-avatar{
+        .right{
+            margin-left: auto;
+        }
+    }
+    .left{
+        margin-left: auto;
+        margin-right: 60px;
+    }
+    .author-avatar{
+        display: block;
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        overflow: hidden;
+        position: relative;
+        box-shadow: $small-shadow;
+        .author-image{
+            @include absolute-element;
+            margin: 0;
+            transform: none;            
+        }
+    }
+    .author-name{ margin: 20px 0 3px; line-height: 1; }
+    .location{
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 400;
+        vertical-align: middle;
+        margin-left: 7px;
+        margin-top: -4px;
+        color: $black;
+        border: 1px solid $boxes-border-color;
+        padding: 5px 8px;
+        border-radius: 6px;
+        position: relative;
+        z-index: 2;
+        &:before{
+            content: '';
+            @include absolute-element;
+            z-index: -2;
+            background: $boxes-border-color;
+            opacity: 0.25;
+        }
+    }
+    .right{
+        margin-right: auto;
+    }
+    .total{
+        font-weight: 600;
+        margin-top: 20px;
+    }
+    div.info{
+        margin-top: 20px;
+        max-width: 550px;
+        color: $light-gray;
+    }
+    .epcl-button{
+        margin-top: 30px;
+    }
+}
+
+/* @end */

@@ -1,0 +1,58 @@
+{
+    "Page {page} of {pages}": "Página {page} de {pages}",
+    "Older Articles": "Artículos Anteriores",
+	"Newer Articles": "Artículos Siguientes",
+    "0 Articles": "0 Artículos",
+    "1 Article": "1 Artículo",
+    "% Articles": "% Artículos",
+    "0 Posts": "0 Artículos",
+    "1 min read": "1 min lectura",
+    "% min read": "% min lectura",
+    "Last Update:": "Última Actualización:",
+    "Author:": "Autor:",
+    "Reading time:": "Lectura:",
+    "Published:": "Publicado:",
+    "Written by: {author}": "Escrito por: {author}",
+    "Image of: {article_title}": "Imagen de: {article_title}",
+    "Editor’s Pick": "Selección del Editor",
+
+    "Subscribe": "Suscríbete",
+    "Join Now": "Únete Ahora",
+    "Join": "Únete",
+
+    "Login": "Iniciar Sesión",
+
+	"Comments": "Comentarios",
+	"Go to comments": "Ir a los comentarios",
+	"Previous Article": "Artículo Anterior",
+	"Next Article": "Artículo Siguiente",
+    "Featured Article": "Artículo Destacado",
+
+	"Location": "Ubicación",
+	"Website": "Sitio Web",
+    "Follow on {network}": "Sígueme en {network}",
+
+    "Error: Page not found": "Error: Página no encontrada",
+    "Page not Found": "Página no encontrada",
+    "Unfortunately the page you are looking for <strong>is not available.</strong>": "Desafortunadamente, la página que estás buscando <strong>no está disponible.</strong>",
+    "Go back to home": "Volver al inicio",
+
+    "Share on:": "Compartir en:",
+    "Tagged in:": "Categorizado en:",   
+    
+    "Members Article": "Artículo para Suscriptores",
+    "Premium Article": "Artículo Premium",
+    "My Account": "Mi Cuenta",
+    "Sign Out": "Cerrar Sesión",
+    "Sign In": "Iniciar Sesión",
+    "Enter your email": "Ingresa tu correo",
+    
+    "This article is for paid members only": "Este artículo es para usuarios con membresía",
+    "To continue reading this article, upgrade your account to get full access.": "Para continuar leyendo este artículo, actualiza tu cuenta para obtener acceso.",
+    "This article is for subscribers only": "Este artículo es para suscriptores",
+    "To continue reading this article, just register your email and we will send you access.": "Para continuar leyendo este artículo, tan solo registra tu correo electrónico y te enviaremos acceso.",
+    "This post is for subscribers on our tiers:": "Este artículo es para suscriptores de los niveles:",
+    " and ": " y ",
+    "Already have an account?": "¿Ya tienes una cuenta?",
+    "Subscribe to our email newsletter and unlock access to <b>members-only</b> content and <b>exclusive updates.</b>": "Suscríbete a nuestro boletín de correo electrónico y desbloquea el acceso a contenido <b>solo para miembros</b> y <b>actualizaciones exclusivas.</b>"
+}

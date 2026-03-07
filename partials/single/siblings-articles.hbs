@@ -1,0 +1,25 @@
+<section class="siblings epcl-flex" id="epcl-other-stories">
+    {{#prev_post}}
+        <article class="prev epcl-flex translate-effect bg-box ctag-{{primary_tag.slug}} {{post_class}}">
+            <div class="info">
+                {{> meta-data/primary-category }}
+                <h4 class="title medium">{{title}}</h4>
+                <p>{{t "Previous Article"}}</p>
+            </div>
+            <a href="{{url}}" class="full-link"></a>
+        </article>
+    {{/prev_post}}
+    
+    {{#next_post}}
+        <div class="separator hide-on-mobile"></div>
+        <article class="next epcl-flex translate-effect bg-box ctag-{{primary_tag.slug}} {{post_class}}">
+            <div class="info">
+                {{> meta-data/primary-category }}
+                <h4 class="title medium">{{title}}</h4>
+                <p>{{t "Next Article"}}</p>
+            </div>
+            <a href="{{url}}" class="full-link"></a>
+        </article>
+    {{/next_post}}
+    <div class="clear"></div>                              
+</section>

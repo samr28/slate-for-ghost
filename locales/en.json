@@ -1,0 +1,58 @@
+{
+    "Page {page} of {pages}": "Page {page} of {pages}",
+    "Older Articles": "Older Articles",
+	"Newer Articles": "Newer Articles",
+    "0 Articles": "0 Articles",
+    "1 Article": "1 Article",
+    "% Articles": "% Articles",
+    "0 Posts": "0 Posts",
+    "1 min read": "1 min read",
+    "% min read": "% min read",
+    "Last Update:": "Last Update:",
+    "Author:": "Author:",
+    "Reading time:": "Reading time:",
+    "Published:": "Published:",
+    "Written by: {author}": "Written by: {author}",
+    "Image of: {article_title}": "Image of: {article_title}",
+    "Editor’s Pick": "Editor’s Pick",
+
+    "Subscribe": "Subscribe",
+    "Join Now": "Join Now",
+    "Join": "Join",
+
+    "Login": "Login",
+
+	"Comments": "Comments",
+	"Go to comments": "Go to comments",
+	"Previous Article": "Previous Article",
+	"Next Article": "Next Article",
+    "Featured Article": "Featured Article",
+
+	"Location": "Location",
+	"Website": "Website",
+    "Follow on {network}": "Follow on {network}",
+
+    "Error: Page not found": "Error: Page not found",
+    "Page not Found": "Page not Found",
+    "Unfortunately the page you are looking for <strong>is not available.</strong>": "Unfortunately the page you are looking for <strong>is not available.</strong>",
+    "Go back to home": "Go back to home",
+
+    "Share on:": "Share on:",
+    "Tagged in:": "Tagged in:",   
+    
+    "Members Article": "Members Article",
+    "Premium Article": "Premium Article",
+    "My Account": "My Account",
+    "Sign Out": "Sign Out",
+    "Sign In": "Sign In",
+    "Enter your email": "Enter your email",
+    
+    "This article is for paid members only": "This article is for paid members only",
+    "To continue reading this article, upgrade your account to get full access.": "To continue reading this article, upgrade your account to get full access.",
+    "This article is for subscribers only": "This article is for subscribers only",
+    "To continue reading this article, just register your email and we will send you access.": "To continue reading this article, just register your email and we will send you access.",
+    "This post is for subscribers on our tiers:": "This post is for subscribers on our tiers:",
+    " and ": " and ",
+    "Already have an account?": "Already have an account?",
+    "Subscribe to our email newsletter and unlock access to <b>members-only</b> content and <b>exclusive updates.</b>": "Subscribe to our email newsletter and unlock access to <b>members-only</b> content and <b>exclusive updates.</b>"
+}

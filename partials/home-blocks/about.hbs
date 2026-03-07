@@ -1,0 +1,19 @@
+{{#get "authors" limit="1" order="id asc"}}
+    {{#foreach authors visibility="public" }}
+        <div class="module-about grid-container grid-small">
+            {{#if profile_image}}
+                <div class="avatar" data-aos="fade-down">                            
+                    <a href="{{url}}" class="translate-effect">
+                        <img class="author-image cover rounded" fetchpriority="high" decoding="async" src="{{img_url profile_image size="medium"}}" alt="{{t "Image of: "}}{{name}}" width="250" height="250">
+                    </a>                            
+                </div>
+            {{/if}}
+            <h1 class="title ularge no-margin underline-effect"><a href="{{url}}">{{name}}</a></h1>
+            <div class="info">
+                <p>{{bio}}</p>      
+            </div> 
+            {{> author-social }}
+            {{> subscribe-form }}
+        </div>
+    {{/foreach}}
+{{/get}}

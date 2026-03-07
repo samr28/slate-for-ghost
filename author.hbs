@@ -1,0 +1,50 @@
+{{!< default}}
+
+<main id="archives" class="main">
+
+    <!-- start: .content-wrapper -->
+    <div class="content-wrapper">
+    
+        {{#author}}
+            <div class="grid-container grid-medium">
+                <!-- start: .author -->
+                <section id="author" class="author epcl-flex {{#if profile_image}} with-avatar{{else}} no-avatar{{/if}}">
+
+                    <div class="left">
+                        <h4 class="title author-name ularge">
+                            {{name}}                            
+                        </h4>
+                        <div class="info">
+                            <p>{{bio}}</p>      
+                        </div> 
+                        {{> author-social }} 
+                    </div>
+
+                    {{#if profile_image}}
+                        <div class="right">
+                            <span class="author-avatar">
+                                <img class="author-image cover" fetchpriority="high" decoding="async" src="{{profile_image}}">
+                            </span>  
+                        </div>
+                    {{/if}}
+
+                </section>
+                <!-- end: .author -->
+            </div>
+        {{/author}}
+        
+        <div class="clear"></div>
+    
+    </div>
+    <!-- end: .content-wrapper -->
+
+    <div class="content">
+        <!-- start: .content-wrapper -->
+        <div class="content-wrapper" id="post-list">      
+            {{> home-blocks/classic-posts}}                  
+            <div class="clear"></div>          
+        </div>
+        <!-- end: .content-wrapper -->
+    </div>
+
+</main>

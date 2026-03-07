@@ -1,0 +1,191 @@
+
+/* @group Global Articles List */
+
+/* Global Meta data */
+
+time:not(.icon){
+    position: relative;
+    &.small{
+        font-size: 12px;
+        line-height: 1;
+    }
+}
+
+.meta{
+    // margin-left: -12px;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: $title-font-family;
+    color: $light-gray;
+    text-transform: uppercase;
+    a{
+        color: $meta-color;
+        &:hover{ color: $main-color; }
+    }
+    &.small{
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        svg.icon{
+            width: 17px;
+            height: 17px;
+            vertical-align: middle;
+            margin-top: -3px;
+            margin-right: 3px;
+        }
+        .rating{
+            font-size: 18px;
+        }
+    }
+    &.inline{
+        .tags{
+            margin-right: 12px;
+            text-transform: none;
+        }
+        .dot{
+            margin: 0 0 0 12px;
+        }
+        .meta-info{
+            display: inline-block;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .author{
+            margin-left: 24px;
+        }
+    }
+    .meta-info{
+        margin-left: 12px;
+        position: relative;
+        z-index: 2;
+    }
+    .author{
+        .author-image{
+            width: 22px;
+            height: 22px;
+            position: relative;
+            left: auto;
+            top: -1px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            border-radius: 50%;
+            font-size: 16px;
+            box-shadow: $small-shadow;
+            @include transition($transition-time-bezier, 'bezier');
+            &:before{
+                display: none;
+            }
+            &.small{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .author-name span{
+            color: $text-color;
+            font-weight: normal;
+        }
+    }
+}
+
+/* @end */
+
+// Articles loop
+div.articles{
+    padding-top: 40px;
+	article{
+        margin: 0 auto 80px;
+        position: relative;
+        z-index: 2;
+    }
+
+    // Classic Articles
+    &.classic{
+        .epcl-flex{
+            align-items: start;
+        }
+        article{
+            .featured-image{
+                align-self: stretch;
+                margin-right: 40px;
+                position: relative;
+                z-index: 1;
+                min-height: 300px;
+            }            
+            .thumb{
+                display: block;
+                width: 425px;
+                height: 100%;
+                min-height: 385px;
+                border-radius: $medium-border-radius;
+                box-shadow: $small-shadow;
+                .fullimage{
+                    border-radius: $medium-border-radius;
+                }
+            }
+            .main-title{
+                margin-bottom: 0px;
+                font-size: 36px;
+            }
+            .post-excerpt{
+                padding: 20px 0 30px;
+                
+            }
+            .info{
+                padding: 40px 30px;
+                margin: auto 0;
+            }
+            .bottom{
+                .meta{
+                    margin-left: auto;
+                }
+            }
+            &.no-image{
+                text-align: center;
+                padding-left: 50px;
+                padding-right: 50px;
+                max-width: $grid-small;
+                .info{
+                    padding: 0;
+                }
+                .bottom{
+                    display: block;
+                    .meta{
+                        display: inline;
+                        margin-left: 20px;
+                    }
+                }
+
+            }
+        }
+    }
+    
+}
+
+/* @group Global Pagination */
+
+.epcl-pagination{
+    clear: both;
+    text-align: right;
+    padding: 30px 0 0;
+    div.nav{ 
+        display: inline-block;
+        > span{
+            display: inline-block;
+            margin: 0 10px;
+            height: 36px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 36px;
+            padding: 0 15px;
+        }
+        a{
+            
+            span{ padding: 0; margin: 0; }
+        }
+    }
+    
+}
+
+/* @end */

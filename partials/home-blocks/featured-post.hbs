@@ -1,0 +1,34 @@
+{{!-- Latest Featured Article on Home --}}
+{{#get "posts" limit="1" filter="featured:true" include="authors,tags" order="published_at desc" }}   
+    <div class="module-featured-post bg-box section">              
+        <!-- start: .articles -->
+        <div class="grid-container grid-large">
+            {{#foreach posts visibility="all"}}
+                <article class="epcl-flex">
+                    <h2 class="title ularge no-margin underline-effect"><a href="{{url}}">{{title}}</a></h2>
+                    <div class="info">
+                        <div class="post-excerpt">
+                            <p>{{excerpt words="35"}}</p>   
+                        </div>
+                        <div class="meta bottom inline">
+                            {{> meta-data/primary-category }} 
+                            {{> meta-data/date }}                    
+                            {{> meta-data/reading-time }} 
+                            {{> meta-data/author }} 
+                        </div>
+                    </div>
+                    {{#if feature_image}}
+                        <div class="featured-image">              
+                            <a href="{{url}}" class="thumb epcl-loader translate-effect shadow-img">   
+                                <img class="fullimage cover" loading="lazy" fetchpriority="low" decoding="async" src="{{img_url feature_image size="classic" }}" alt="{{t "Image of: {article_title}" article_title=title }}" width="600" height="450">
+                            </a>
+                        </div>
+                    {{/if}}
+                </article>
+            {{/foreach}}   
+            <h3 class="editor-pick">{{t "Editor’s Pick"}}</h3>     
+        </div>
+        <!-- end: .articles -->   
+    </div>  
+    <div class="clear"></div>                
+{{/get}}

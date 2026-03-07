@@ -1,0 +1,39 @@
+<article class="default classic-large ctag-{{primary_tag.slug}} {{^if feature_image}}no-image{{/if}}">
+     
+    <div class="post-format-image epcl-flex">
+        {{#if feature_image}}
+            <div class="featured-image">              
+                <a href="{{url}}" class="thumb epcl-loader translate-effect">   
+                    <img class="fullimage cover" loading="lazy" fetchpriority="low" decoding="async" src="{{img_url feature_image size="loop_classic" }}" alt="{{t "Image of: {article_title}" article_title=title }}" width="600" height="450">
+                </a>
+            </div>
+        {{/if}}
+
+        <div class="info"> 
+            <header>
+                <h2 class="main-title title underline-effect slower-effect"><a href="{{url}}">{{title}}</a></h2>
+            </header>
+            <div class="post-excerpt">        
+                {{#if feature_image}}            
+                    <p>{{excerpt words="35"}}...</p>   
+                {{else}}
+                    <p>{{excerpt words="55"}}...</p>   
+                {{/if}} 
+                <div class="clear"></div>              
+            </div>  
+            <footer class="bottom">
+                {{!-- <a href="{{url}}" class="continue-reading epcl-button ctag ctag-{{primary_tag.slug}}">{{t "Read More"}} <span class="screen-reader-text">{{title}}</span></a> --}}
+                <div class="meta bottom inline small">
+                    {{> meta-data/primary-category }} 
+                    {{> meta-data/date }}                    
+                    {{> meta-data/reading-time }} 
+                    {{> meta-data/author }} 
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+</article>

@@ -1,0 +1,29 @@
+{{!< default}}
+
+<main id="home" class="main">
+
+    <!-- start: .content-wrapper -->
+    <div class="content-wrapper"> 
+        <div class="sticky-container section np-bottom">
+            
+            {{^is "paged"}}
+
+                {{#if @custom.enable_about_me}}
+                    {{> home-blocks/about}}
+                {{/if}}
+                
+                {{#if @custom.enable_featured_post}}
+                    {{> home-blocks/featured-post}}
+                {{/if}}
+
+            {{/is}}
+
+            {{> home-blocks/classic-posts}}    
+
+        </div>  
+    </div>
+    <!-- end: .content-wrapper -->
+
+</main>
+
+    

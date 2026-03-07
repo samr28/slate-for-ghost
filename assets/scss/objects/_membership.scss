@@ -1,0 +1,134 @@
+/* @group Global: Membership */
+
+.access-icon{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    z-index: 3;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 0px 0px $small-border-radius $small-border-radius;
+    background: $yellow;
+    color: $black;
+    svg{
+        width: 17px;
+        height: 17px;
+        vertical-align: middle;
+    }
+    &:hover{
+        color: $black;
+    }
+}
+.post-access-public{
+    .visibility-public{ display: inline-block; }
+}
+.post-access-members{
+    .visibility-members{ display: inline-block; }
+}
+.post-access-paid{
+    .visibility-paid{ display: inline-block; }
+}
+
+/* Article CTA */
+
+.subscribe-cta{
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid $border-color;
+    padding: 50px;
+    text-align: center;
+    font-size: 16px;
+    .title{
+        margin-bottom: 10px;
+    }
+    .button{
+        margin-top: 25px;
+    }
+    .sign-in{
+        margin-top: 25px;
+        font-size: 90%;
+    }
+}
+
+/* Subscribe Form */
+
+.subscribe-form{
+    .description{
+        color: $light-gray;
+        b{
+            color: $text-color;
+        }
+    }
+    .inputbox{
+        padding-right: 175px;
+    }
+    .submit{
+        i{
+            font-size: 100%;
+        }
+        svg{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            margin-top: -3px;
+        }
+    }
+    .error-detail, .success-message{
+        opacity: 0;
+        padding: 0;
+        height: 0;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+        @include transition;
+        i{
+            font-size: 120%;
+            margin-left: 5px;
+            color: $main-color;
+        }
+    }
+    &.success{
+        .success-message{
+            height: auto;
+            opacity: 1;
+            margin-bottom: 15px;
+            i{
+                animation: shake 1.25s linear;
+            }
+        }
+    }
+    &.error{
+        .error-detail{
+            height: auto;
+            opacity: 1;
+            margin-bottom: 15px;
+        }
+    }
+    &.loading{
+        .submit{
+            pointer-events: none;
+            i, svg{ display: none; }
+            .loader{
+                content: "";
+                display: block;
+                position: relative;
+                height: 12px;
+                width: 12px;
+                border: 2px solid $black;
+                border-radius: 100%;
+                border-right-color: transparent;
+                border-top-color: transparent;
+                animation: spin .5s infinite linear;
+                position: absolute;
+                right: -35px;
+                top: 15px;
+                z-index: 10;
+        
+            }
+        }
+    }
+}
+
+/* @end */

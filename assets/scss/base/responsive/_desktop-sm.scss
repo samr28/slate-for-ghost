@@ -1,0 +1,73 @@
+/* Small Desktops and Horizontal Tablets */
+
+@media screen and (min-width: 981px) and (max-width: 1200px){
+
+    .hide-on-desktop-sm{ display: none !important; }
+	body{ min-width: inherit; font-size: 14px; }
+	img{ max-width: 100%; height: auto; }
+    .grid-container{ padding-left: 30px; padding-right: 30px; }
+    .title{ font-size: 20px; }
+    div.left-content{
+        padding-left: 20px;
+        padding-right: 0px;
+    }
+    .content{
+        margin-top: 60px;
+    }
+    div.text{
+        font-size: 16px;
+    }
+    .section{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    /* @group Header */
+
+    #header{
+        .logo{
+            .title{
+                font-size: 50px;
+            }
+        }
+    }
+
+    /* @end */
+
+
+    /* @group Home */
+
+    .module-featured-post article{
+        .title{
+            font-size: 28px;
+        }
+        .info{
+            margin-left: 30px;
+        }
+        .featured-image{
+            min-height: 225px;
+            margin-left: 30px;
+            .thumb{
+                width: 250px;
+            }
+        }
+    }
+
+    div.articles.classic{
+        article{
+            .main-title{
+                font-size: 24px;
+            }
+            .featured-image{
+                min-height: 225px;
+                margin-right: 30px;
+                .thumb{
+                    width: 325px;
+                }
+            }
+        }
+    }
+
+    /* @end */
+
+}

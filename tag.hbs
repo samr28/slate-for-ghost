@@ -1,0 +1,39 @@
+{{!< default}}
+
+<main id="archives" class="main">
+
+    <div class="tag-description bg-box">
+
+        {{#tag}}
+            <div class="grid-container grid-medium {{^if feature_image}}no-image{{/if}}">
+                <div class="epcl-flex">
+                    <div class="left">                    
+                        <h1 class="title ularge no-margin">{{name}}</h1>
+                        <div class="count meta">{{plural ../pagination.total empty=(t "0 Articles") singular=(t "1 Article") plural=(t "% Articles")}}</div>
+                    </div>
+                    {{#if description}}
+                        <div class="description">
+                            <p>{{description}}</p>
+                        </div>
+                    {{/if}}
+                    {{#if feature_image}}
+                        <div class="category-image ctag-{{slug}} shadow-img"><img src="{{img_url feature_image size="medium"}}" fetchpriority="high" decoding="async"></div>
+                    {{/if}} 
+                </div>
+                <div class="clear"></div>
+            </div>
+         
+        {{/tag}}
+
+    </div>
+
+    <div id="post-list">
+        <!-- start: .content-wrapper -->
+        <div class="content-wrapper content">      
+            {{> home-blocks/classic-posts}}
+            <div class="clear"></div>            
+        </div>
+        <!-- end: .content-wrapper -->
+    </div>
+
+</main>

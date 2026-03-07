@@ -1,0 +1,58 @@
+{{#if isSecondary}}
+    <nav class="secondary-nav grid-container grid-small textcenter underline-effect small-effect">
+        <ul class="menu">
+            {{#foreach navigation visibility="all"}}
+                <li class="nav-{{slug}}{{#if current}} current-menu-item{{/if}}"><span class="dot"></span><a href="{{url absolute="true"}}">{{label}}</a></li>
+            {{/foreach}}
+        </ul>
+    </nav>
+{{else}}
+    <ul class="menu">
+        {{#foreach navigation visibility="all" to="4"}}
+            <li class=" nav-{{slug}}{{#if current}} current-menu-item{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+        <li class="nav-search">
+            <a data-ghost-search class="epcl-search-button"><svg class="icon"><use xlink:href="{{asset 'images/svg-icons.svg#search-icon'}}"></use></svg> Search</a>
+        </li>
+        {{#foreach navigation visibility="all" from="5" }}
+            {{#if @first}}
+                <li class="nav-more menu-item-has-children">
+                <a href="javascript:void(0)">
+                    <svg width="18" height="4" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0ZM16 0C14.9 0 14 0.9 14 2C14 3.1 14.9 4 16 4C17.1 4 18 3.1 18 2C18 0.9 17.1 0 16 0ZM9 0C7.9 0 7 0.9 7 2C7 3.1 7.9 4 9 4C10.1 4 11 3.1 11 2C11 0.9 10.1 0 9 0Z" fill="#1D293D"/>
+                    </svg>                    
+                </a>
+                <ul class="sub-menu">
+            {{/if}}
+                    <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+            {{#if @last}}
+                </ul>
+            </li>
+            {{/if}}
+        {{/foreach}}
+
+
+        {{#if @site.members_enabled}}
+            {{#if @member}}            
+                <li class="nav-subscribe">
+                    <a href="javascript:void(0)" data-portal="account" class="epcl-button">
+                        {{t "My Account"}}
+                    </a>  
+                </li> 
+                <li><a data-members-signout class="link-button">{{t "Sign Out"}}</a></li>
+            {{else}}
+                <li class="nav-subscribe">
+                    <a data-portal="subscribe" class="epcl-button">
+                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6 0C14.0301 0 16 1.97368 16 4.73684C16 5.86192 15.7513 6.88887 15.3383 7.821C14.6019 7.36737 13.732 7.10526 12.8 7.10526C10.149 7.10526 8 9.22603 8 11.8421C8 12.7109 8.23704 13.5251 8.65072 14.2251C8.4048 14.369 8.18528 14.4956 8 14.6053C6.00001 13.4211 0 10.2632 0 4.73684C0 1.97368 2 0 4.4 0C5.88798 0 7.2 0.789474 8 1.57895C8.8 0.789474 10.112 0 11.6 0ZM13.6 11.0526V8.68421H12V11.0526H9.6V12.6316H11.9992L12 15H13.6L13.5992 12.6316H16V11.0526H13.6Z" fill="white"/>
+                        </svg>
+                        {{t "Join"}}
+                    </a>   
+                </li>
+            {{/if}}
+        {{/if}}
+
+
+    </ul>
+{{/if}}
+

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    {{! Page Meta }}
+    <title>{{t "Page not Found"}} - {{@site.title}}</title>
+
+    {{> head}}
+
+    {{ghost_head}}
+</head>
+<body class="page-404 {{#if @site.cover_image}}cover{{/if}} {{body_class}}" {{#if @site.cover_image}}style="background: url({{@site.cover_image}}) no-repeat center center fixed;"{{/if}}>
+
+    {{^if @site.cover_image}}
+        <div class="body-background"></div>
+    {{/if}}
+
+    <!-- start: #page-404 -->
+    <main id="page-404" class="main epcl-flex epcl-fullheight">
+        
+        <div class="epcl-flex">
+    
+            <div class="not-found np-mobile">                    
+                <h1 class="title ularge title-gradient" data-aos="fade-down">404</h1>
+                <h2 class="title">{{t "Error: Page not found" }}</h2>
+                <p>{{{t "Unfortunately the page you are looking for <strong>is not available.</strong>"}}}</p>
+                <div class="buttons">
+                    <a href="{{@site.url}}" class="epcl-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                        {{t "Go back to home" }}
+                    </a>
+                </div>
+            </div>   
+                 
+        </div>
+
+        {{!-- {{> footer-minimal}} --}}
+
+    </main>
+    <!-- end: #page-404 -->
+
+    {{ghost_foot}}
+
+    {{!-- Theme Scripts --}}
+    <script defer src="{{asset 'dist/scripts.min.js' }}"></script>
+
+</body>
+</html>
+
+

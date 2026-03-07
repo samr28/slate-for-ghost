@@ -1,0 +1,43 @@
+{{! Document Settings }}
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+{{! Mobile Support }}
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{{! Styles'n'Scripts }}
+<link rel="shortcut icon" href="{{asset 'favicon.ico' }}">
+
+{{! Theme Styles }}
+
+<link href="{{asset 'dist/style.min.css' }}" type="text/css" rel="stylesheet">
+<link href="{{asset 'dist/plugins.min.css' }}" type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'">
+
+{{> typography}}    
+
+{{!-- Custom Settings --}}
+<style>
+    :root{
+        {{#if @custom.background_color}}
+            --epcl-background-color: {{@custom.background_color}};
+        {{/if}}
+    }
+    {{#get "tags" limit="100" }}
+        {{#foreach tags visibility="public"}}
+            {{#if accent_color}}
+                div.tags a.ctag-{{slug}},
+                div.tags.fill-color a.ctag-{{slug}}{ background: {{accent_color}} !important; }
+            {{/if}}
+        {{/foreach}}  
+    {{/get}}
+</style>
+
+<script>
+	// Theme Config, check the documentation before edit this file
+    var site_url = '{{@site.url}}';
+	var theme_config = {
+		masonry: 'on', // If you don't need masonry style, just set to "off"
+	};  
+</script>

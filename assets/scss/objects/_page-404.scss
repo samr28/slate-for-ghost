@@ -1,0 +1,40 @@
+/* @group 404 Page */
+
+#page-404{
+	div.not-found{
+        padding: 25px 25px 80px;
+        margin: 80px auto 0;
+        text-align: center;
+        position: relative;
+        h1.title{
+            margin: 0 0 40px;
+            font-size: 250px;
+            display: block;           
+            margin-bottom: 30px;
+            line-height: 1;
+            position: relative;
+            z-index: 2;          
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+        .bg{
+            font-size: 500px;
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-5deg);
+            filter: blur(20px);
+            color: red;
+            z-index: -1;
+            opacity: 0.25;
+            pointer-events: none;
+        }  
+        p strong{
+            display: block;
+        }
+        div.buttons{ margin-top: 30px; }
+	}	
+}
+
+/* @end */

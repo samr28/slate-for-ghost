@@ -1,0 +1,13 @@
+<div class="center grid-container content">
+    
+    <!-- start: .articles -->
+    <div class="articles classic classic-image">                
+        {{#foreach posts visibility="all"}}
+            {{> loop/classic-article}}                 
+        {{/foreach}}        
+    </div>
+    <!-- end: .articles -->
+    
+    {{pagination}}
+
+</div>

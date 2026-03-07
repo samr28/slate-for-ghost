@@ -1,0 +1,60 @@
+@mixin button{
+    display: inline-block;
+	color: $white;
+	font-size: 16px;
+	padding: 10px 22px;
+    position: relative;
+    z-index: 2;
+    font-family: $title-font-family;
+    font-weight: 700;
+    border-radius: $small-border-radius;
+    background-color: $main-color;
+    color: $white;
+    letter-spacing: 0.2px;
+    @include transition(300ms, 'bezier');
+    svg{
+        margin-right: 3px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+	&:hover, &.active{
+        transform: translateY(-1px);
+        color: $white;
+    }
+    &.small{ font-size: 14px; padding: 5px 18px; }
+    &.large{ font-size: 20px; padding: 8px 40px; }
+}
+
+.button, .epcl-button:not(.epcl-shortcode){
+    @include button;
+}
+
+
+/* Global Tags */
+
+div.tags{
+    display: block;
+    font-size: 13px;
+    color: $text-color;
+    font-family: $title-font-family;
+    a{
+        color: $text-color;
+    }
+    &.fill-color{
+        a{
+            display: inline-block;
+            background: rgba(#000, 0.05);
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin: 0;
+            font-weight: 500;
+            border: 1px solid transparent;
+            &:hover{
+                transform: translateY(-1px);
+                border-color: rgba(#000, 0.1);
+            }
+        }
+    }
+}
+
+/* @end */

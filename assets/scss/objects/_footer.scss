@@ -1,0 +1,111 @@
+/* @group Footer */
+
+#footer{
+    margin-top: 120px;
+    border-top: 1px solid $border-color;
+    padding: 40px 20px 20px;
+    background: $boxes-bg-color;
+    .logo{
+        margin: 0px 0 15px;
+        text-align: center;
+	}
+
+    .subscribe-form{
+        max-width: 550px;
+        margin: 0 auto;
+        .description{
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .form-group{
+            max-width: 425px;
+            margin: 0 auto;
+        }
+    }
+
+    .secondary-nav{
+        // margin-top: 30px;
+        svg{
+            vertical-align: baseline;
+            margin-bottom: -2px;
+            margin-left: 2px;
+        }
+        ul{
+            margin-top: 20px;
+        }
+        ul li{
+            display: inline;
+            margin-left: 12px;
+            a{
+                font-size: 15px;
+            }
+            .dot{
+                margin-right: 12px;
+            }
+            &:first-child .dot{ display: none; }
+        }
+    }
+
+	#back-to-top{
+		position: fixed;
+		right: -10px;
+		bottom: 10px;
+		text-align: center;
+		z-index: 99;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        padding: 0;
+        font-size: 25px;
+        opacity: 0;
+        border-radius: $large-border-radius;
+        cursor: pointer;
+        svg{
+            margin: 0;
+        }
+        img{ vertical-align: middle; }
+        &.visible{
+            opacity: 1;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+    .epcl-border{ margin: 0; }
+	.published{
+        text-align: center;
+        margin: 30px 0 0;
+        font-size: 14px;
+        border-top: 1px solid $border-color;
+        padding: 40px 20px 0;
+        font-family: $title-font-family;
+        a{
+            font-weight: 700;
+        }
+        svg.icon{
+            margin: 0 4px;
+        }        
+        .estudiopatagon{
+            position: relative;
+            z-index: 2;
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -11px;
+                width: 100%;
+                height: 100%;
+                background: url("data:image/svg+xml,%3Csvg width='27' height='7' viewBox='0 0 27 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.0802 0L27 7H13.1603L20.0802 0Z' fill='%23E1159E'/%3E%3Cpath d='M27 7H13.1603L20.0802 0L27 7ZM13.2723 6.95333H26.888L20.0801 0.066582L13.2723 6.95333Z' fill='%23140C76'/%3E%3Cpath d='M6.91985 0L13.8397 7H0L6.91985 0Z' fill='%232FB0ED'/%3E%3Cpath d='M13.8397 7H0L6.91985 0L13.8397 7ZM0.111975 6.95333H13.7277L6.91983 0.066582L0.111975 6.95333Z' fill='%23140C76'/%3E%3Cpath d='M13.9682 0L20.481 7H7.45537L13.9682 0Z' fill='%234B3EB9'/%3E%3Cpath d='M20.481 7H7.45537L13.9682 0L20.481 7ZM7.5628 6.95333H20.3736L13.9682 0.0687695L7.5628 6.95333Z' fill='%23140C76'/%3E%3C/svg%3E%0A") no-repeat center top;
+            }
+        }
+    }
+}
+
+#ghost-portal-root iframe{
+    right: auto;
+    left: 0;
+}
+
+
+/* @end */
